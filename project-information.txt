@@ -1,0 +1,29 @@
+1) Insert below the student numbers and names of the 1-3 group members, one per line
+
+Anna Hakala - 595858
+Peter Leander - 291767
+
+2) Write below the name of your group
+
+Team Classy
+
+3) Write below a short description of the machine learning problem you plan to address
+
+We want to generate classical music with an RNN. The basic idea is that music can be generated in similar way that language can be with RNNs.
+
+As a basis we will use a model created by Christine McLeavey. We will then create variations of her model and create a small website where we ask people to rate the samples created by the original model and the variations. We will thus get data on which model works the best.
+
+4) Write below what deep learning approach(es) you plan to employ in your project
+The base network will be an RNN using LSTM but we will try different variations to see what works best and what doesn't work at all.
+
+5) Write below what deep learning software you plan to use in your project
+We will use PyTorch and FastAI.
+
+6) Write below what computational resources you plan to utilize in your project
+We will use Google Colab for the computations.
+
+7) Write below what kind of data you plan to use in your experiments
+We will use classical music translated to text from midi-files. The translation can be done with MIT's music21 library and midi-files can be downloaded in bulk from Classical archives (https://www.classicalarchives.com).
+
+8) Write below what are the reference methods and results you plan to compare against
+As a reference we will use the Clara RNN created by Christine McLeavey (http://christinemcleavey.com/clara-a-neural-net-music-generator/)
