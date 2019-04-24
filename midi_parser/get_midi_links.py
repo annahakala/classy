@@ -6,10 +6,11 @@ from bs4 import BeautifulSoup
 import requests
 from urllib.parse import urlparse
 
-html_doc = open("midi_site.html")
+html_doc = open("http_source/page_source.html")
 soup = BeautifulSoup(html_doc, "html.parser")
 
 f = open("midi_links","w+")
+
 # Set data path
 for link in soup.select("a[href*=mid]"):
     f.write(link.get('href') + " ")

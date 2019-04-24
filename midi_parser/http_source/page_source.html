@@ -1,0 +1,2508 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Classical Archives: Your Downloads</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.classify.org/safesurf/" l gen true for "https://www.classicalarchives.com/" r (SS~~000 1))'/>
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "Single file v2.0" l gen true for "https://www.classicalarchives.com" r (nz 1 vz 1 lz 1 oz 1 cb 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.classicalarchives.com" r (n 0 s 0 v 0 l 0))'/>
+<meta http-equiv="content-language" content="en"/>
+<meta name="Robots" content="INDEX, FOLLOW"/>
+<meta name="Author" content="Classical Archives LLC"/>
+<meta name="Title" content="CLASSICAL MUSIC ARCHIVES - CLASSICAL MUSIC"/>
+<meta name="Subject" content="Classical Music Archives"/>
+<meta name="Publisher" content="Pierre R. Schwob"/>
+<meta name="Language" content="English"/>
+<meta name="Rights" content="Copyright (c) Classical Archives, LLC"/>
+<meta name="Description" content="The largest classical music site on the web. Hundreds of thousands of classical music files. Most composers and their music are represented. Biographies, reviews, playlists and store."/>
+<meta name="Keywords" content="classical music,classical archives,listen to classical music,play classical music,download classical music,listen to complete works,play complete works,listen to full classical music,play entire classical music works,browse classical music,classical music downloads,classical music streams,classical music streaming,classical music albums,classical music works,classical music composers,classical music artists,classical music performers,classical music instruments,classical music periods,free classical music,classical music MIDI,classical music files,free classical music MIDI,classical music performances,free classical music performances,classical music videos,classical music player,classical music blog,classical music interviews,performers interviews,classical music editorial,music festivals,classical music festivals,classical music concerts,musicology,composer biographies,classical music collection,classical music library,classical music labels,classical music store,classical music online,online classical music,online music store,MIDI,MP3,AAC,audio,music,playlists,orchestras,baroque,classical,romantic,modern,concerts,opera,chamber music,symphony,concerto,sonata,recital,classicalarchives,classicalarchives.com,free internet radio,classical radio"/>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+
+<link rel="alternate" type="application/rss+xml" href="/news.xml" />
+
+
+<link rel="stylesheet" type="text/css" href="/css/ca-2.css?r=102129" />
+
+
+<!--[if IE 6]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:static;
+    /* overflow:visible; */
+}
+</style>
+</style>
+<![endif]-->
+<!--[if IE 7]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:relative;
+    /* overflow:auto; */
+}
+</style>
+<![endif]-->
+
+
+
+<script type="text/javascript" src="//www.google-analytics.com/ga.js"></script>
+
+
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=cma"></script>
+
+<script type="text/javascript">
+var cma_base_url = 'https://www.classicalarchives.com';
+var cookie_domain = '.classicalarchives.com';
+var is_subscriber = true;
+</script>
+
+
+<script type="text/javascript" src="/js/ca.js?r=106748"></script>
+
+
+
+        <style type="text/css">
+            a.link {
+                color: #800;
+                font-weight: bold;
+            }
+            li.heading {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            span.heading {
+                font-size: 14px;
+            }
+            li.question {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            a.question {
+                font-weight: bold;
+            }
+            ul.indent {
+                margin-left: 15px;
+            }
+
+            .downloadtable {width:100%;}
+            .downloadtable td {
+                height:22px;
+                padding:4px 0 0 0;
+            }
+            DIV.dlExpDate { color:#980001; }
+            .dlHd {background:url(/images/nv/nv_sprite.png) repeat-x 0 0;}
+            .dlOrder {padding:5px 10px;}
+            .dlPurch {padding:5px 10px;}
+            .dlWork {font-weight:bold;padding-left:20px!important;}
+            .dlTrack {padding-left:40px!important;}
+            .dlSize {padding-right:10px!important;text-align:right;white-space:nowrap;}
+            .dlButton {width:110px!important;text-align:right;}
+
+            .wiazf {font-size:77%;display:block;margin-right:6px;}
+        </style>
+        <script language="javascript" type="text/javascript">
+            function setToDownloaded(elId) {
+                try {
+                    YAHOO.util.Dom.addClass($(elId),'yui-button-redownload');
+                    YAHOO.BTN[elId].set("label", 'Re-download');
+                } catch(x) {
+                    YAHOO.util.Dom.removeClass($(elId),'yui-button-redownload');
+                }
+                return true;
+            }
+            // toggle
+            function toggle_list(e) {
+                var e = window.event || e;
+                var target = e.target || e.srcElement;
+
+                if (target && target.nodeName) {
+                    while (target.parentNode && target.nodeName != "LI" && target.nodeName != "BODY")
+                        target = target.parentNode;
+                }
+
+                if (target.hasChildNodes()) {
+                    var children = target.childNodes;
+                    for (var i = 0; i < children.length; i++) {
+                        if (children[i].nodeName == "UL") {
+                            children[i].style.display = (children[i].style.display == "none" || children[i].style.display == "") ? "block" : "none";
+                            break;
+                        }
+                    }
+                }
+            }
+            document.onclick = toggle_list;
+
+            function setNotice() {
+                YAHOO.util.Connect.asyncRequest('POST', '/ajax/s-request-dlmanager-notice.html', {
+                    success : function(o) {
+                        try {
+                            var rs = YAHOO.lang.JSON.parse(o.responseText);
+                            if (YAHOO.lang.isObject(rs)) {
+                                if (YAHOO.lang.isBoolean(rs.s)) {
+                                    if (rs.s === true) {
+                                        YAHOO.CMA.doRedirect(rs.r);
+                                        YAHOO.util.Dom.addClass("emailNotification",'txtRed');
+                                        $("emailNotification").innerHTML = "<strong>Thank you.</strong> You will be notified as soon as the Download Manager becomes available.";
+                                    } else {
+                                        var okBtn = function() {
+                                            this.hide();
+                                            YAHOO.CMA.doRedirect(rs.r);
+                                        };
+                                        if (YAHOO.lang.isNumber(rs.f.c)) {
+                                            if (rs.f.c == 0) {
+                                                showMsgBox('info', 'No Changes Made', 'Please review your information and try again.', null, okBtn, null);
+                                            } else {
+                                                showMsgBox('error', 'Error', rs.f.m, null, okBtn, null);
+                                            }
+                                        } else {
+                                                showMsgBox('error', 'Error', 'Error Code: '+rs.f.c, null, okBtn, null);
+                                        }
+                                        YAHOO.CMA.loading.hide();
+                                        YAHOO.CMA.loading.destroy();
+                                    }
+                                }
+                            }
+                        } catch(x) {
+                            okBtn = function() {
+                                this.hide();
+                                YAHOO.CMA.doRedirect(rs.r);
+                            };
+                            showMsgBox('error', 'Error', x, null, okBtn, null);
+                            YAHOO.CMA.loading.hide();
+                            YAHOO.CMA.loading.destroy();
+                        }
+                    },
+                    failure : function(o) {
+                        okBtn = function() {
+                            this.hide();
+                            YAHOO.CMA.CAPM.show();
+                        };
+                        showMsgBox('error', 'Connection Failed!', 'We were not able to save your account changes. Please try again.', null, okBtn, null)
+                        YAHOO.CMA.loading.hide();
+                        YAHOO.CMA.loading.destroy();
+                    }
+                });
+            }
+
+            function clearTracks() {
+                showConfirmation('Please Confirm', '', 'This will remove the grayed-out tracks that you have previously downloaded from this page.<p>(Note: We cannot detect if a download was successful, only that you initiated it.)</p><p>Are you sure you want to clear these tracks from this page?</p>',
+                    'Yes', function() {
+                        $('downloadForm').submit();
+                    },
+                    'No', function() {
+                        this.hide();
+                    },
+                    true);
+                return false;
+            }
+        </script>
+    </head>
+    <body id="cma">
+
+
+
+<script>
+_udn = ".classicalarchives.com";
+</script>
+
+<iframe id="yui-history-iframe" src="/images/nv/nv_sprite.png"></iframe>
+<input id="yui-history-field" type="hidden" />
+<a name="top" id="top"></a>
+
+<div>
+
+    <div id="doc3" class="sides">
+        <div id="hd">
+
+
+
+
+            <div id="cma-header">
+                <div id="cma-header-prim">
+                    <a href="/" class="logo"><img src="/images/a_logo.png" alt="Home" /></a>
+
+                    <a href="https://blog.classicalarchives.com/" class="blog"><img src="/images/blog.png" alt="Blog" /></a>
+                    <a href="/howto/tutorials.html" class="howto"><img src="/images/howto.png" alt="How To" /></a>
+
+                    <div id="cmasearch" class="search yui-hidden">
+                        <form id="cmasearchform" method="get" action="/search" onsubmit="return cmaSearch.submitState;">
+                            <div id="cmasearchbx">
+                                <div id="cmasearcherr" class="yui-hidden">Please enter a search term</div>
+                                <div id="cmasearching" class="yui-hidden">Searching...</div>
+                                <div id="cmasearchdesc" class="yui-hidden">Search for Music</div>
+                                <input id="cmasearchtxt" type="text" name="q" class="yui-hidden" />
+                            </div><input id="cmasearchbtn" type="submit" title="Search" value=""/>
+                            <ul class="cmanv srchnv">
+                                <li class="expand"><a href="/advanced_search.html"><span class="bd">Advanced Search</span><span class="end"></span></a></li>
+                            </ul>
+                        </form>
+<script type="text/javascript">
+var cmaSearch = YAHOO.CMA.Search.clone();
+cmaSearch.init('cmasearchtxt', 'cmasearchbtn', 'cmasearchform', 'cmasearch');
+</script>
+                    </div>
+
+                </div>
+
+                <style>
+                    #cma-header-misc-nav .navgiftsbtn {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px -22px !important;}
+                    #cma-header-misc-nav .navgiftsbtn:hover {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px 0px !important;}
+                </style>
+                <div id="cma-header-misc-nav">
+                    <a id="navgiftslink" class="yui-hidden" href="/secure/gift/select.html?bid=nbg"><div class="navgiftsbtn" style="float:right;width:185px;position:relative;top:-4px;"></div></a>
+                </div>
+                <script>
+                    if (location.pathname.indexOf("/secure/") != 0)
+                        YAHOO.util.Dom.removeClass("navgiftslink", "yui-hidden");
+                </script>
+                <div id="cma-header-sec-nav">
+                </div>
+                <div id="cma-header-prim-nav">
+                </div>
+
+                <div style="float:right; padding:10px 15px 0 0;">
+                    <a href="/secure/cart/display.html" class="link" style="color:#000; text-decoration:none;">
+                        <span style="font-size:10px;" id="cma-header-cart-counts"></span>
+                        <img style="vertical-align:middle;" src="/images/b_view-cart.png" alt="View Cart" />
+                    </a>
+                </div>
+                <div id="cma-header-member">
+                    <div id="cma-header-testimonials" style="float:left; margin-top:14px" class="yui-hidden">
+                        <a href="/testimonials.html">
+                            <img style="vertical-align:middle;" src="/images/testimonials_link.jpg" alt="Testimonials" />
+                        </a>
+                    </div>
+                    <div id="cma-header-member-login" class="yui-hidden">
+
+                    </div>
+                    <div id="cma-header-member-welcome" class="yui-hidden">
+                        <a href="/secure/logout.html" class="memberLogout more">LOGOUT&nbsp;<img src="/images/b_black-arrow.gif" alt="" class="arrow lm"/></a>
+                        <span class="memberWelcomeMsg">Welcome <a href="/secure/youraccount.html" id="welcome-name"></a></span>
+                    </div>
+                </div>
+
+                <div class="yui-hidden" id="cma-stage-music">
+
+                </div>
+<script type="text/javascript">
+YAHOO.CMANAV.data = null;
+YAHOO.CMANAV.navigator = null;
+YAHOO.util.Event.onContentReady("cma-header-prim-nav", function () {
+    YAHOO.util.Connect.asyncRequest('GET', '/ajax/nav-data.json', {
+        success: function(o) {
+            try {
+                YAHOO.CMANAV.data = YAHOO.lang.JSON.parse(o.responseText);
+
+                YAHOO.CMANAV.navigator = new YAHOO.widget.Navigator("cma-header-prim-nav", {
+                        "navigation":YAHOO.CMANAV.data,
+                        "secondaryNavigation":"cma-header-sec-nav"
+                    }
+                );
+
+                var navID = "2";
+                var navIDParam = param("navID");
+
+                var navIDCookie = readCookie('cma_navid');
+                if (navID == "2" && navIDParam) {
+                    navID = navIDParam;
+                    createCookie(
+                        "cma_navid"
+                        , navID
+                        , 0
+                    );
+                } else if (navID == "2" && navIDCookie) {
+                    navID = unescape(navIDCookie);
+                }
+                YAHOO.CMANAV.navigator.set("default", navID);
+                YAHOO.CMANAV.navigator.render();
+            } catch (x) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','Sorry, but there was a problem parsing this page.', x);
+                return;
+            }
+        },
+        failure: function(o) {
+            if(o.status > 0) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','An error occurred. Please try again or contact us if the error persists.', 'Code: '+o.status);
+            }
+        }
+    });
+}, this);
+
+                </script>
+            </div>
+
+            <div id="cma-stage" class="cma-stage" class="yui-hidden"></div>
+        </div>
+        <div id="bd">
+            <div id="cma-doc">
+                <div id="cma-stage-message" class="yui-hidden"></div>
+                <div class="stage-content">&nbsp;</div>
+                <div id="cma-main" class="content pBottom yui-hidden">
+
+                    <div id="MMSG"></div>
+<div id="bcNav"><ul>
+<li class="first"><a href="/">Home</a></li>
+<li>Your Downloads</li>
+</ul></div>
+
+        <table class="master" cellspacing="0">
+            <tr>
+                <td id="main">
+                    <div id="content">
+                        <!-- CONTENT -->
+                        <form name="removal_form" id="downloadForm" method="post">
+                            <input type="hidden" name="remove" value="remove"/>
+                            <div class="box">
+                                <div class="nav"></div>
+                                <div class="hd"><h1>Your Downloads</h1></div>
+
+                                <div class="bd pad" style="overflow:hidden;">
+
+                                    <div id="download_instructions" class="bd borderBottom">
+                                        <table>
+                                            <tr>
+                                                <td nowrap="nowrap" style="padding:0 8px 0 0">
+
+                                                </td>
+                                                <td>
+                                                    <strong>Download with your browser.</strong>
+                                                    <br/>
+                                                    <ol class="dec">
+
+                                                        <li>
+                                                            Hold down your keyboard's &quot;control&quot; key.<br/>
+                                                        </li>
+                                                        <li>
+                                                            Control-click any &quot;Download&quot; button.<br/>
+                                                        </li>
+                                                        <li>
+                                                            Choose &quot;Save Link As...&quot;.<br/>
+                                                        </li>
+
+                                                        <li>
+                                                            Choose a download folder
+                                                            <br/>
+                                                            (e.g., your Desktop).
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Save&quot; to begin download.
+                                                        </li>
+                                                        <li>
+                                                            Repeat all steps for each download.
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="box mBottom">
+                                        <div class="bd borderBottom dlHd" style="overflow:hidden;">
+
+                                            <div class="rs dlOrder"><strong>Free downloads made on:</strong> Apr 23, 2019 (00:00:00 UTC)</div>
+
+                                            <div class="clearSm"></div>
+                                        </div>
+                                        <div class="bd">
+                                            <div class="dlExpDate" align="center" width="100%">You have until May 23, 2019 to download these tracks.</div>
+                                        </div>
+                                        <div class="bd pad" style="overflow:hidden;">
+                                            <table class="downloadtable" cellspacing="0">
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <strong>Album:</strong> ClassicalArchives Collection
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Puer natus in Bethlehem, BWV603
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Puer natus in Bethlehem, BWV603
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/gHX1V4f5ahn4iv9gRkSSyy9Bx8WUgtQKBgK2c_0dEnuTuaqsKm6544tfFSRDCnBR1R0DgHKkVNC50DNQWDc6qigRdpN44GFdHn4tU3tSjpNb4bT0tsWekQtWGrht2hevsWrFu5Lr-1E8EjymzI5HAw/3X_WVNPMDqp6cCsqSlkSSQ/bwv603.mid" onclick="return setToDownloaded('dlBtn_1_1_1_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in E-, BWV548 ('Wedge')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Prelude
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        70 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/RwSyK3iStTJOan8jOvTEX83ULkcpUp8tthDChqybRnCpd39bPSgxaUd63PC-6MahRjDkGWv9r8fEpDHStrGChoOnwY9UJZ7LB4PEsMf9fE6T2RsHwiAL_0x0DezkFBcDh1Fhl0nBNaq3eZIenZAtug/J-J7JCudKLErL9XMozhjQg/bwv548a.mid" onclick="return setToDownloaded('dlBtn_1_1_2_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Fugue
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        95 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/_JuGW_hmvgB5o0JSEEKy3AbolkxVYsjQ7blLs1HM93tgpQ3qEVRhk9SP1Kb1uu-bqCIRtmnULO3M4HzZY3_oZzrQOepLA5eO8fxa_IGCD33_XyCoudU4Bphrd7mC0aaUSyy7CxtuAlR_h5o2W04s2w/QkZjc4oTNcRhGW0z1Bycsw/bwv548b.mid" onclick="return setToDownloaded('dlBtn_1_1_2_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in D, BWV532
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Prelude
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Yp34VAT9lGTf3i6mha6D9KY5cdYKx2oPyTKUVLdkuNlacj_jONwKL2npUf4RBuyZEPs0hMRWHKkXopZlaj4mcM7iYEJGKSKaftYiQDk3nfPkH27fynn3VsD3gNGPhiwV0g4yG3TFCe_qsV_vzBZPhA/XTumaxy0fb9yXXJV_W7oIg/prelude_.mid" onclick="return setToDownloaded('dlBtn_1_1_3_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Fugue
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        21 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/VPMgtYoblDpcwES5r5ubNrVaUi-4oDq-wEOydvTmMctWfc05kOy42qJrXaqENw6IiFbSVN5E8vCUx97-sWrvo90sVYOyOla_ILmHdRV5xIg4xE3NW5to-nnTZK-kGigE43MD0HtQ3ourpIFNcZISHQ/GNowU04D6ALqk1D6V8Dycw/fugue_in.mid" onclick="return setToDownloaded('dlBtn_1_1_3_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Trio Sonata No.5 in C, BWV529
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/HIMsXmKP1kNi2IPH7-ALygJM5-OBlX57Kfx0R2dvh_d8Xm44ljUry6a-0kZbNllfq8xUZToaOoO_i3pvqsfgJ7O3B4j6-q7HyKZpTqCt4mhzQp70psi3ZVcxpS_kEHEEjnZ9lgJB3JNxM2jxrNbW7Q/sz_TBwq1BLB2SviP3CWgEA/bksn51sb.mid" onclick="return setToDownloaded('dlBtn_1_1_4_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Largo
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/-rmppvjlorRvp4Q9Yq-kZiEzfjPJlhwhmdCNGWA_01jVstr3-xg6-yR2bLjwGdhDAwTWfDUquq2XK9vmv-aScoaudCt5815XCK49VF6ixoQYiQvKH2kVYCNMhwRTbdv7obut6yDMj1MYx2VenTDKnw/GZWVrCx6xNeg23uIhV9Bgw/bksn52sb.mid" onclick="return setToDownloaded('dlBtn_1_1_4_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/blLLwLydOpksvWZSUjk3uBgYeTavskj0zlhFkicto8B5IiYJTfWe8r0N-8phUm1UtFj6YIoKSAy9ATeA3stfTP24W5oRPiOfODPuSDCXUv-NGKLbRZWHGFJyPuq89R7e3Nxg3h15ypALmdOX0rvWnQ/tgv5YC1NhMIoVJz7VL0YeQ/bksn53sb.mid" onclick="return setToDownloaded('dlBtn_1_1_4_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Trio Sonata No.4 in E-, BWV528
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Adagio. Vivace
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/o4qMQwymXonaqFnv-9SYfQtfPybnboWPnm-0VARFkL1DS2ZAGhaO5Iq8lGFeINGMmV7BAsOfaLhwPT8o_k78ehXBfN6OCFPHbSA4p436uc-OpEX1cjaI5jaC2AuB80AoaFvEsHK8ENU_qcICgQoiHA/vN2Kq17Xzzkjb77uYlGcCw/bak41sb.mid" onclick="return setToDownloaded('dlBtn_1_1_5_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Andante
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/OUqhIjONnZ4K9ODpwCfXtybnilEjhm88qO02MyxDBMASOtNzxWBmBiuyruCRU3Ya5sfZHdzQ5CTneEeWQjfkuDljI8qGkV0z9wZYR2CTc8VwZPhiZc5TO5WSNqska0rg9Zeg3qboOZFK3C7cpOFVnw/q4U6rNAPLKjU4rjuhogMjQ/bak42sb.mid" onclick="return setToDownloaded('dlBtn_1_1_5_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Un poco allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/pmGaZztYbPKianhCrbYWWKTvgCimwkLWQH9QSJgXNPIbnKMJ3A07NL31ywfmsN4wuPZV0uAvyaUgOf9NRRAH0VWnS2MPHj0tIbg7_vJTToBgHZAy4jxoI1SeB8hn2zBuX6kRuaY4dIU6dPnTNrNSkQ/53tDYzOjH7bU8OsbIk0HlA/bak43sb.mid" onclick="return setToDownloaded('dlBtn_1_1_5_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Christe, du Lamm Gottes, BWV619
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Christe, du Lamm Gottes, BWV619
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/AQpKQhv1D-0-xEijc3SlpMRR7fx3cmtqehw78bHPv9jEqJP_bRH4CZ-uw6l2S6uuH4atnE_T4hgjIWW0h0rWbClrG-Q3YYuEjzAS-0jCtDAMYpJYoEZq_-VIRyz309k9pQshiTblBWQ18cN5x_7RXQ/A8LmbvQ9uu5mViJzHJ-afQ/bwv0619.mid" onclick="return setToDownloaded('dlBtn_1_1_6_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Trio Sonata No.6 in G, BWV530
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Vivace
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        40 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ZN2WkmTrT2zcjqkaAUxX4G7dZK2vQ8fm2IF_KesLtf1jyLZ65bSMbaLTMRYSPJ7vgDdkMaCkTWXptCEaMoBQDN8KuLls1jeIt-lAMosSKEhws_h5kWzOCqyvG-SZh9YfG-5zCPdJcD9cfm99_RZ03g/O_rRIvaF4iZDO2kZoadl7w/bjss6v.mid" onclick="return setToDownloaded('dlBtn_1_1_7_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Lento
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/uS4X7IMygus2ZKDIKCt6ucEeeLsSLF6s52a6Af9tG4PvPOew89MYbwtfq68npnNEhmaSpP-U3AF8MfrLgRFZAH-JbIedRcOZZhu8_BrlVVtnabsea4XmGmHrJh7vS-IHcqpOhsCvVIWIlKkQdW8uWg/06uaWmddkXBhfrt9RgDLdA/bjss6l.mid" onclick="return setToDownloaded('dlBtn_1_1_7_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        35 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bRMTMNYcVsIDpgNRO7h_a8J5QX5uLX6XqKl-s_06TfQaFhnUQqlTSxS37g9bgiUs49odmpQIB7ByT7JnwjCuAC-Lmf3jsFmEHQoeMdqE7Mkmbb9AJnauGPIqGe-p2cFrcqdUE6x2vYew5BdJFwSyPw/aLfpGEft1wMCYq_TMqhUEw/bjss6a.mid" onclick="return setToDownloaded('dlBtn_1_1_7_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Toccata and Fugue in D-, BWV538 ('Dorian')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Toccata
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        35 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/muJzNa06LG2MDzpk1XZdBIckngDnbfkwtubyThI7-vxwgujgXMJPYdYT94CuSTuTyJHqBXT0_M5BdR7HLZFl7zwMPoQoOL9wGJ91KSSsWeTkbkZ990-TavLUNXswRsaVbjLmJzfR0cd0vL6DMI0gfQ/5SY2BhgoFvd2ub82X2y2-A/bwv538t.mid" onclick="return setToDownloaded('dlBtn_1_1_8_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Fugue
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        25 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/zOkcbQHdJRnXI5050le7UJHUF0O4afE6Bwidiu5RTFCPrAfP8INF49r8T7qqxjoL1VNEfF3HfUXFmVuHSdRsjiIowuQxYu6uoRcjgIUhksnMOhEaB6gJM8ucj6iqiIEHSdWVsPRpFo0kk1vz9V3oVw/RqoFcsy2LX87-qZg27EGkw/bwv538f.mid" onclick="return setToDownloaded('dlBtn_1_1_8_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in G, BWV541
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Prelude and Fugue in G, BWV541
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        33 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/8TEEzTnw4ZvET4TbJpiRhwsb8Pg2bYq7KtAkGkzEOBJKDWOHeUbbcmsi6jcL6AEjbQVYPfHt5m0Uye7vQP9e14zAUQfmcBrg7oJ2eb1FtnKljrKZzdcwDhrUSenHtvszg00DVRLgclnZ5UKlUmRwhQ/eBiGx7g0rcP30VYcrTrHNA/jsbwv541.mid" onclick="return setToDownloaded('dlBtn_1_1_9_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Toccata and Fugue in F, BWV540
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Toccata
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        38 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ZO_7gAKG9AbMd4LLTagrNv2SGfqRyiMUEaN37zBwRci3IH-KazGrHpeINPD7lEYC9PHlMacnPs8kcydmSuzkQVTwgayJ5m8li4CJQYPJOLuOK27GkP22zjS4AQD7yZwEH8bY7QE5j1CmG8htbNtIQg/lHiUDNOkuTZUq-6AZynWMQ/bwv540_1.mid" onclick="return setToDownloaded('dlBtn_1_1_10_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Fugue
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/l-7TTbb1xYZ6BpoL8oGmucCFXRgZ1fadezaskKYUWib6-_5W1FslRjuLzT7j2Y9NrzP1PClPVNWoui5GPDJJ7vwtCWdbU8XU-gRluDEQraWl6RDVcrYWaxg4P223UX0YanSVI_BSySlEUqCp1TTy9A/2bfCACST3oEaye-VBYiYAw/bwv540_2.mid" onclick="return setToDownloaded('dlBtn_1_1_10_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Organ Concerto in D-, BWV596 (arr. of Vivaldi's Concerto Op.3, No.11, RV565)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro. Grave. Fuga
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        40 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_11_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/nyHL0jgpXad0jgSKZzQRybciE_LkzbZEUd79918YrqTLI4fBHye-pdv76-G3RT27h-V3LQ0aEutkJtB7BlhktW1usgAtEGBidMs85jMKOnyEOcz1q1LqiBJypyXc3Vby_2apqMALDV9MJpHzkdyaCg/NO69N2cnMgWg9VEcFZzR3A/congr_1m.mid" onclick="return setToDownloaded('dlBtn_1_1_11_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Largo e spiccato
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_11_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/24ZX41gAqvnWmdd2ynZxSOATFhpYob6rM2104-NH5CA1pgtYeJnvPZfBQ06HNK9HUe-YmGzylCJHw6nIzVquyrOqfjE3fEqSx4qINO5sQGevyoPERAaZ9xBHhf6tRHjZNsn0twXB5mbkm-0-iJbprQ/Ov3qf_sSPwXSryQjSCWKdA/congr_2m.mid" onclick="return setToDownloaded('dlBtn_1_1_11_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        52 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_11_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/d4hKCdFEQXjRGV3FLVLRJuXhASe1r1QuKPSRlCLdRUcq02JbaDmI1tR41320V9IuZtyu4LwUggtyHbtcMeQsTDI4moI27VeTTdvIFA90T0PvJRFgnq8Te6V_T3YzdOP4BBkiVED0VM6i4UKg7wcc-w/fn_8RLknDSOzqz75HeRXGQ/congr_3m.mid" onclick="return setToDownloaded('dlBtn_1_1_11_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in E-, BWV533 ('Cathedral')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Prelude and Fugue in E-, BWV533 ('Cathedral')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/V9whwxHwGqArcuWoNVWlv-U21_HKljEQS37QqPmpFTg8OKOS47dX33WoX27d1vKu3Be7fpcQfXOfAJNzsh_zLVKFoQnpLHenqYpLY-eKqq9aErXT4HY8GRMdCYCVS1WgnojrOLnGXOv1ianwju5DCQ/nTL2wgtxz3h-WfXaDJIKBA/jsbwv533.mid" onclick="return setToDownloaded('dlBtn_1_1_12_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Toccata, Adagio and Fugue in C, BWV564
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Adagio
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_13_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/oXF-DuVAoRb00AaDWHUEUWzjFdKOna-Qjj-4bAc-iY2m6C5DOl2Zfw6hharqThUyhg4vPRz8RJ_NuFPiVlnotw_OgAWaVruf7QI8CnrzAWSS09-Rj_qCsN9IuhgrOKrlCQflzGNIPxnlHI61FitGTA/uE2_CKxmI344U_-L6PfLCw/Bach_Toccata_Adagio_and_Fugue_in_C_BWV_564.mid" onclick="return setToDownloaded('dlBtn_1_1_13_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in A-, BWV543 ('The Great')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Prelude and Fugue in A-, BWV543 ('The Great')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        35 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_14_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ucTbAO4o7dJZqVG-KWC_A5zxpVTXLrQFlfpy3gcf3pVSxOujsPo5nm3Cx57aLi0EP2CvA8rxPSYT86GyHGjNPZ0mHe6-GyeIG9nX5E8ZAqQRAlX6Gb0DRcNquPcVJ5MoUpUlHriOcf_l6OadPPWDbA/bGJNLi62b_eTxjaho_ndXA/jsbwv543.mid" onclick="return setToDownloaded('dlBtn_1_1_14_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Das alte Jahr vergangen ist, BWV614
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Das alte Jahr vergangen ist, BWV614
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_15_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/D8pVbcDvf8lu4_cYm8t1xBUN0LxxRwc3hmEvzkJP66l8Rxhx4QlmsdABM87OWzKFsiX-2f71Td_GcN-NqYHQSpkHpbzTGPaaz4wsmTZ7xBPaNTtPLbdxTjzfyg5rQFNlQmtVgaddxac0kORkfSSENw/YwlOHJ1sO5zK8fRtUYzkRQ/bwv614.mid" onclick="return setToDownloaded('dlBtn_1_1_15_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Gelobet seist du, Jesu Christ, BWV604
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Gelobet seist du, Jesu Christ, BWV604
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_16_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/zbdyQpEpRRHC5V1M6O_ALvQyWhJ8rIwpTtvYHRMVSTMkef0Sy-ISmUijM7dlWXWg2WhCGQ4MZzHASTmlm59wH19ag2VMiQZt_kMfaN7UeQJjhkVyEpTWmL4mQnLSniUvEb7rRrnJAa6nYBtrEYPh1w/HozmBO_cEPpe7dh6_vWLhQ/gelobet.mid" onclick="return setToDownloaded('dlBtn_1_1_16_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Passacaglia and Fugue in C-, BWV582
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Passacaglia and Fugue in C-, BWV582
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        37 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_17_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Oypm1cHAEL2NRuTMcrez4nYW1zT3mYUzmEM5eWafRxkjnfOrdbbqmeRuXQzgJgBZ-_njTbr_BXKLbzpaO2TxOzf2QIyqIvMLeorf-CxoOIZp8erbGbf3cXCHKON53RhnidDExeLKU6ltInXUxigq2g/7E8fE8ihv_OO-6yV6S1wYQ/pfcm-gm.mid" onclick="return setToDownloaded('dlBtn_1_1_17_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Trio Sonata No.1 in Eb, BWV525
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro moderato
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_18_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/3XsQQGup7c5zhtUf8rNOko89KBlFcFVSaRv66vHffw9Zjn30v-Z6A22LVj1rtxK-RK5bZHhInl7sNROME7iWVt2-P074Oo0sqVLwSB7UcUFs-udnkIfzpjE24LHyyo0cYHRGwSCnAcIsl7wLlRpt7g/uZcxiBG3eKrZysxMKDUjzQ/bson11sb.mid" onclick="return setToDownloaded('dlBtn_1_1_18_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Adagio
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_18_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bRA_eYSTwt4qL-wy6n6KVX6QCYjY5mg6sUUFbiXPGDWKp64ICxAL5gSCuP8uS29gxP6hb07XnTI7iWn3FjRg-BuK6DrM8euzJfrgaN84KCPBxg18JHYsMB7QRxri0mBNxmfxuAN96iXHUjO4CjxdYg/XY-6tLnSudtwpMSb_D5MXA/bson12sb.mid" onclick="return setToDownloaded('dlBtn_1_1_18_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_18_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ajF-mripj2O1pjYcFUDzqIMLY0AsWvKImKcpvfpiLmmXtumH0laGccBprdO9r7RuKxnBHgKfpL_g6shp9rg2nKhqs_TJElFxTIm7j8eIt_OkmvUbcq7IB04K2rXCknb1BpEriaXHLZji1GtjADRklg/Swk_tUiQPDFO4Yn7fffEdQ/bson13sb.mid" onclick="return setToDownloaded('dlBtn_1_1_18_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Fantasia and Fugue in C-, BWV562
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Fantasia and Fugue in C-, BWV562
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        23 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_19_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/A-C-F_9t7-bAE4lrCELRbjylz5XHJs16Q2jrzUzp74njzXG-XUP3XVJjSRTlF1r8sUToklyNP0vHnFSOnu1l1KLhuGzKZLaxJtMAsIQjeIL4PKmv0ZFNH1T_SM47JoawMgsCXI5iAg810cTL7VX3Zw/EC6wQFeplSuzuIgHHyE6jA/bach562.mid" onclick="return setToDownloaded('dlBtn_1_1_19_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: 4 'Duettos', BWV802-805 (from Clavier-Übung III)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in E-, BWV802
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_20_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/qZ_rsrP5oH6W5tzlxCfPAQBs5vvdJLTzC23XurN8FCUO8VAa86X3Tm9sspfnk8gfuXSxdfpEDHtOfrzppF_Gw38ebvEt_izkr1QnJeXMM_FICI9gMb6lEYtnAV67tPeczdfZ5fThD6XN-J4XLRGOww/u61aqs6_Ks6mOMrABwBViQ/bwv802.mid" onclick="return setToDownloaded('dlBtn_1_1_20_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in F, BWV803
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_20_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/gx9MqH-TW6tHTYIiMSdaKpX8h5e8FNs3QpITO-gJJJ4HvsJZygpIL6pXk8xatjH9EEnStAvDAvDMozJ0wVR3OljGYL4DNs2oUGG1DQpXawc42h7gWEvNAAZyUfaLE70FIcBY61-NlW6WUGbZ36BiQw/84CZsynClICMu_fg8EOLgQ/bwv803.mid" onclick="return setToDownloaded('dlBtn_1_1_20_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in G, BWV804
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_20_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/CXfSbO__p0r1wsF14tbjc_W3MwOOw8L07eiot8V3r3XUV6SUnszL4A3GZnrF_TYBLYRjT9E270oxxLLBemAbNGO4npDuPwC-fuHJciIyNcKHM4SrjjaCMcsnHsg22KzcodCeVgDe655outLJw7ObqA/TZCTy-XGrdmlEWVoII4g-A/bwv804.mid" onclick="return setToDownloaded('dlBtn_1_1_20_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.4 in A-, BWV805
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_20_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/h3A0d19Hg6jpTtcupjJ-kQP-wIPVsmgUvwKctwb3EEvtXP6ZVh7KymE7AR66M5oO9BAmqYiEWfEihRmQZ1mcpPsMqdtQ0o1Si3ABi-SzBkykhJbDty3E42OWlSfgbOMttR6SwiGb0lu-63Re1upocw/aQFEbkIifczXNXcCnbqycg/bwv805.mid" onclick="return setToDownloaded('dlBtn_1_1_20_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Organ Trio in D-, BWV583
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Organ Trio in D-, BWV583
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_21_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/FU9JY9_zcowHdJ0j9rVfuNeWXu9rVRhM2K65-032twA0ey0Qsws8gRnh4n51vs64IG36eFaD2qGSL-pZeJESvOs7fhd4cJVe50q0uzEUPkQfBJpTM4YD_NpzILnyY7S5rHZoqlM7km7ichWl1BZLtw/2ZoRvCXF9IV-IaGL2yYOMw/bwv583.mid" onclick="return setToDownloaded('dlBtn_1_1_21_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Nun komm, der Heiden Heiland, BWV599
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Nun komm, der Heiden Heiland, BWV599
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_22_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bP0qp2qIQSzXIR51rIsLFtiKFQxvRelhqFYrbrC9O6SViljF5mWHT6DB8KrBEFPlja1U0E2hWHt8pgAA7T96Ri0nDKDWfL8CVzspyiubZiFOoe3H8QEvIsD_9qQTTP-usiGicT2W9_PwuODVnWhaiw/4Z7kCUtt5OFdbXTJZifbiQ/bwv599.mid" onclick="return setToDownloaded('dlBtn_1_1_22_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Fantasia in B-, BWV563
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Fantasia in B-, BWV563
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_23_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/oaPvHeoP-fsaTcHBwTsm43cR5Mqzru7Ee3tGwK5M9xwk2MRT59-jj2XWN89m80kL27mx7PsRfOl6jR4SGY9FthEB7g9CcT5XlV1Hl8D5j7ymoQD0zgaJpFCCPJl5sue8Tjc8de2W6LNyJvZj0VSAqA/CCqG1RchqE-vYS7-RSSLNA/bwv563.mid" onclick="return setToDownloaded('dlBtn_1_1_23_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in G, BWV550
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Fugue
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        23 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_24_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/kB3rnL4gCy0k_L2aQWPeIp4ebkzEce3v_sv0NuFfNgpbKNOfGcwtPwA6ogMny7mt7IUhu9OMmbJ1ltUPH8jMysF4OBROtops2U7G9f65QrVsi6QG32m7NyErh-MdQGmHljqk97kJlOherK6Y214zbg/zksIvuNVIa8wVij3knC1mg/gdur.mid" onclick="return setToDownloaded('dlBtn_1_1_24_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Organ Trio in C-, BWV585 (dubious)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Organ Trio in C-, BWV585 (dubious)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/B3KisZujIaA5eLenZ7mx1hWbPM8wcC9Wuv3V_aB8MAw8Nat75H9iDiF2oFpRW87Rnc3JZ7nRnNWq4iho3ehgwOWj45Pac2DqiKNigTKcrug26T6Fk5EgApvqtb6pBa53rSAy1HsilCukpJZW7L685A/YjgAaaVoSIxyLv2EHdQ9JA/bwv585.mid" onclick="return setToDownloaded('dlBtn_1_1_25_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Aria for Organ in F, BWV587 (after 'L'impériale' by Couperin)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Aria for Organ in F, BWV587 (after 'L'impériale' by Couperin)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_26_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/7zJ7mP2OdRANUSTHEuAAkX-cbb07l875J7ifmdPIUUd4P6cE9kFdWwsa7hTFyTD6xKhYhEKx9TddY4ZuEynotZEDWTI38sugaATaYGt7dKc82ItJwg5cWeS3wpwcT9Kk97kquG_0If4NaucHQZgbrA/bemP_5LYSBDpe8qrakhfUw/bwv587.mid" onclick="return setToDownloaded('dlBtn_1_1_26_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Organ Trio in G-, BWV584 (dubious)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Organ Trio in G-, BWV584 (dubious)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_27_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/8afVG_8n1Pnp9alMTCCCJkypQC-dfdcsn1r17oE0d7rRyb0Gk0ZZONB1P7Jeqa_RwPLKXlsjK7EekzGNjGtiTbr8D0DDlyEc8jAjtwRz2J-g8NHdqZP_BPkIls1gtip7vn86u0ZWJcgtUkVaMj24jA/XUBMJ-9lcrXCib_RrnD2IA/bwv584.mid" onclick="return setToDownloaded('dlBtn_1_1_27_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Durch Adams Fall ist ganz verderbt, BWV637
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Durch Adams Fall ist ganz verderbt, BWV637
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_28_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/pqK4vsRHZ7mJNDtieca_xtEBZcqJM04uNKh4vVFQmLtyooIeE8sI0F4RIbVtj2IdU0W8o99V7KZ1Yz95RPddCLgdQa8mQIL_HM_y1u3tvADfE-bHV0JXTvtGUwnRgqNP5RgpITIt270VzGPJuRqlMQ/N5sZRBr_IFFxDOcjVCrmiA/bwv637.mid" onclick="return setToDownloaded('dlBtn_1_1_28_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in C, BWV531
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Prelude and Fugue in C, BWV531
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        28 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_29_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/d54RX4r7DafEOGRM8SFyDIUUI4ZscBHJ045q3ETayyTKeh1lfVHXgG9xvceGbO83eEN1hfXUvtdDXlv7ZzvJr_DmZ5cBFcAtR4q_tUjbBDmgh7JU3djDkP3WSfqs0-mf2ioavQoqLqWjnTvXJg9sxQ/sW7t23j4AXLtlj9e0LhkZg/bach531.mid" onclick="return setToDownloaded('dlBtn_1_1_29_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Vater unser im Himmelreich, BWV636
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Vater unser im Himmelreich, BWV636
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_30_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/yDnv4bDFsYHNFvwxSKhQX0bM5UddSYxjNkHWkh83IP9wpmCk--oeRTS1AcbrdzuxtIR0vHUmSKzi7dbqrN1zhXBC0yriO2-pnY_iaSrisaanfzj-ahzO_lBIpAh_9EAmDUAlH9gIgbWqgXruezqG5A/x5KdgCppLXrSqpBiHFKkCg/bach_vat.mid" onclick="return setToDownloaded('dlBtn_1_1_30_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in C, BWV545
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Prelude
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_31_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/vrhDBi1A6uqszatVF5VpYuWkTmJuaRQ5U5UPAybWnXiMtarlc0PYqbfG8dvWJDtUrMTMRlnBwzyR10mXaUPdfQqkGvxDv1d9u80mMT_8EJ-CBcC-Y7ot4Lcip7gE2FkcI9D19eKzaQMgakK3H6_JRg/PD5RnpMLd6uQprV1zHJ2Ig/bwv545a.mid" onclick="return setToDownloaded('dlBtn_1_1_31_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Fugue
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_31_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/6K9SbmLoGW86DGWn5ooLajMKCKgnzhML9EeQ3GzA0efNrqaCMhVs3NJa4TPKaPBOpzTWBhhaHBcxVPzg-E1dBmnQFKsUuXX40z8i4gUZL-o1mmLBDDAGXe5apcMBPktc_z2SmM-3K-5YG3Pbh50xSA/ByuUq1kCYSEMhXTBvLPZzA/bwv545b.mid" onclick="return setToDownloaded('dlBtn_1_1_31_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude in G, BWV568
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Prelude in G, BWV568
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        22 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_32_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/gqDeCZO1qrN8oE_yYJafW865QLjKOnXn2aPJX3dPin3jLIAMum6g13eTessHLp6MufNNafjgASwbY1vcVMSAvDA1QcgA_ioVKjJzdreWptUorCRQGqC-NR6kZ5JOmXXV39Sj1_9y6Tm8pxHW3ay1UQ/yAVvXq_ozmtAYlO19XWSeA/prbwv568.mid" onclick="return setToDownloaded('dlBtn_1_1_32_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Alla breve in D, BWV589 (doubtful)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Alla breve in D, BWV589 (doubtful)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_33_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ZPw7kyZLzuHZsGEyDVvmK85i37jpYrEZmC604IudkyXPmXZaFWLpwbXtvpS6lVOBws2jpjme8oNKLmMUGNjTmmUbXEwXGzxPs9SCWB_-8wvOUEkIfuMFyFtjlhFXMbof_C6-mh8K1MGSibblyCo5qg/cU5HJpZpP0WsifDK4RcXNA/589_albr.mid" onclick="return setToDownloaded('dlBtn_1_1_33_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Fugue in B- on a Theme by Corelli, BWV579
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Fugue in B- on a Theme by Corelli, BWV579
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_34_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/z7XZCMWsLMzpcunVHblXBis37sCrY2ImdWLwCU6QHxomUFFeclajtXe0B_ExYrmZr-Fna63_BxxBz3XCvZrLyN-RN94kr_VhaIpIyob8ZnFQz7EQ7IK8Z_tSnj3IiTNh_-Gc09-7iYiAXukLf8uV8g/fWuwjKdlkydtvyJrr9rk6Q/bwv579.mid" onclick="return setToDownloaded('dlBtn_1_1_34_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: In dir ist Freude, BWV615
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        In dir ist Freude, BWV615
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_35_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Wp_w9nzjc9FkaFllM_h5CLKo48CLLhGfhEDXBeIlOoltp18OVSTNBwRiZcBVGBTopCsyMQUlQkHrd9b9R8FNptdCqCTzGJW_6ghh53MLubh9f2o8GqjbhRMM1yKLOrlB1QUGoH-N6qdL3Hoh_lWB4w/sJHVHA9hk7800usqLhwWWw/bach615.mid" onclick="return setToDownloaded('dlBtn_1_1_35_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Fantasia in C, BWV570
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Fantasia in C, BWV570
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_36_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/brd9klU5rtKLP8jwQ9P6HKUFBjRZ_gscKJ1tf3j5itc1Cb_Cyg65c88o9-8dSeFAenOnNGkrehfx1pVNf7N4XLA5LkOO9456uReFrHTEEarkWXYuI13Bp4ur9XARydPC6bY30NLVndU4cbwUl6df5Q/v7cDs5c3csyNDDw9O3iPag/fcbwv570.mid" onclick="return setToDownloaded('dlBtn_1_1_36_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: 8 Preludes and Fugues, BWV553-560 (spurious, possibly by J.T. Krebs)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Prelude and Fugue in F, BWV556
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_37_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/o3YaQCbP78dLpHeSPCfsCSErIJkH2kOM08ZRon24GLOkKnWRqItgWnF5zvi6O2qXkYhpmvfQ5stxK0GRK5KVzyRN8vu9SVxRaVQRhduxKnmjtn3vzrlGskhoki0MVGioAHk_MnXr9h7Y6Gfu4RitkA/eiBKGrqPKRPnmGwa2iI-5A/mh_jblpf.mid" onclick="return setToDownloaded('dlBtn_1_1_37_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Pastorale in F, BWV590
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Pastorale in F, BWV590
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        62 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_38_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/-loNjC4Tkiem-dNVQif1GnpIAA4Bw7gvVEv-4TFFPwV31dXdGOiu0AONngMdcJzhfQjxFAYcgJdtf3o-BA-RxmjeyN6L7AqW8j3K1sUJiUzcTinbfryTREXt_8XkUN5OYmJ4frIBvaPeqUdUCwaZ2g/v5uFrq1EjwtXqEXyrB-M1g/bpast.mid" onclick="return setToDownloaded('dlBtn_1_1_38_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: In dulci jubilo, BWV608
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        In dulci jubilo, BWV608
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_39_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/tHIQ2Aw_BA5an2IYwWLneKi5RiZybqBWUzK5tDh5lqlx2v-FvNX72A3bbnwX7y7WGCPTK_6cSNglrXq2Kq9lhW-X0OH9mUpTBJyN7O0sYvl9ORXGlEqxYsdvr0F2yWMy-92U7RP1gt-D7ldbZX13sA/ggeXG-AXYFXmL4mBLrOI_g/indulci.mid" onclick="return setToDownloaded('dlBtn_1_1_39_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Ich ruf zu dir, Herr Jesu Christ, BWV639
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Ich ruf zu dir, Herr Jesu Christ, BWV639
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_40_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/2kK6oTKf2w8B_LPHPUrQ7QRIID2PL1uaLAdjrarZ-WJ2EH2rbPu8Hzu1a2a5c1Wek9ehw6_j8J4bYD5Qsjr8Kz1DfQl1mm8mhUSHWM4WgArNNSrEr9trfm2RouBhodqHqPGH-uPG5HlUwpMmSXpUFA/INaS2V4kJzQs4NsInn5oPw/ichruf.mid" onclick="return setToDownloaded('dlBtn_1_1_40_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Canzona in D- BWV588
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Canzona in D- BWV588b (Manualiter version)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        30 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_41_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Dh37T6qFldaiMnNF7U4ej1hhTuzi_KlkaxCvUCYARUbe19SSCXnF2UIuVylxnqgeYLwXYJeUb-qXCiaE31VJirwS-Weg-MeLVlG1e5ZMU1t1sXL_-U2rf1R4g1qyaeKqYpwoFb0-pglslrS4VNUO4w/mpAM7-e-tuS30FB9dUCBcA/bach588m.mid" onclick="return setToDownloaded('dlBtn_1_1_41_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Canzona in D- BWV588b (Pedaliter version)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        32 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_41_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/YA9Cs7WrXzBHhKWk-iuhyo5HcrYHik32ulBpotTkZx_1VGtOA67TTxVZ7C9mcinTaAy95uY0EKA4h3Q9vH5N5-AxYl6bjKAyTDv35p9YU2bDFgsp_98MyVXwo4sM0AAeTJuwQHjkwBeyX2k1CWWj5A/04Aa3fvujROgb9vLlG7O_Q/bach588p.mid" onclick="return setToDownloaded('dlBtn_1_1_41_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Toccata and Fugue in E, BWV566
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Toccata and Fugue in E, BWV566
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        32 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_42_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/xSEWHUonZ3UXMhpjPbxY0dCu6HGDJETRtho93hnEAbe2kseNLYw0eS8mN3trEonkEQkrBx16i2FTc01OyyFZRxOSJG7wfGGkiIIRuuWNEUqES-yAfZSrL0kXBhHQNbfUtw12kC_in01Ce9ljjOd0TQ/IDAbsZLMbrUR97Ir9nqX7g/bwv566.mid" onclick="return setToDownloaded('dlBtn_1_1_42_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Fantasia and Fugue in G-, BWV542
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Fantasia
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_43_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/2ooDM3O3eQ8mtTO1AmvIz-ctkKLOKIC6vE6OLWczaZ_58q0_C6CH7OrpEDT2L41NByw1-c5GNXmCsc4U86bYQcGI5MBWaZzd2hD8rhIlU2xlbwQZ1K5ITYaxtKZvsE9qZW-tFzYKVxtcAxq9ec639Q/tkNpNEIWhnW31r0qF1V8GQ/0542a.mid" onclick="return setToDownloaded('dlBtn_1_1_43_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Fugue
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        26 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_43_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/cNGmlGhUBXE5qI1TNk-I1hO-drQX9rvXeyV2viXNSGIS2t-T9rGIyVtJo6y6o_JbDB6goNY0LslMgE54OJ0yeinyo8YgujaGgYNrE6SG3EY1DYg1BwAEP4tMHaE6r5voajazSl0oMSpkr23atTFDbQ/S350Dcyn2ZMgpQTwrj-nwg/0542b.mid" onclick="return setToDownloaded('dlBtn_1_1_43_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Fugue in G-, BWV578 ('Little Fugue')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Fugue in G-, BWV578 ('Little Fugue')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_44_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/14FJEVbBOzLntBTuTj4HkCp8sMw9EJS9vQPmEAtAiN5xgjS6Xam2niTLklbSTXbdwWhBHdqamd9uUWXJxpZancK8Kspus45adJoQkgcZWRjgqed1Q2aBkp5r9qcniwR4EX0g4ryeUg1i1OcOKB64aQ/Cr9MhnhZAbCbBo0hzyfkig/little_f.mid" onclick="return setToDownloaded('dlBtn_1_1_44_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Wachet auf! ruft uns die Stimme, BWV645 ('Sleepers Awake')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Wachet auf! ruft uns die Stimme, BWV645 ('Sleepers Awake')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_45_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/r5RR7QZ52rsGGg_jR395PRDp5aNG9VBN1IFj1sYPJpSA2cBBEJxDpTENUYMIok5MRvN4yDV17XdhTWUYVMy8N4RIyPSxHeUuZGS-3K1nS1gkhSiGJjOpxfk8NyClCUGatnUZJ2XtfN_mk7bCqvE8eA/NBB-KuNAgvLE4AqIXui3rg/bacschu1.mid" onclick="return setToDownloaded('dlBtn_1_1_45_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in Eb, BWV552 ('St. Anne's')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Prelude
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        45 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_46_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ES7-NtNw1-5YJK4o7MGyc7DSElr2aZSdqd7IGm1Uyqt0pKxu3BQL7Kghtx8RcSfj9i_I8o_WXpd-daMlOWCHVFIYEL8v-aYtNDmFh8Y2KKwN5dnWqsgrh2IvXCRXn1hh6QSZMrZvCMdS_I8X4AkKqg/Z8cutj9hDa3qN1GcA8wLSw/bwv552a.mid" onclick="return setToDownloaded('dlBtn_1_1_46_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in F-, BWV534
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Prelude
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_47_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/b1pQTEpQH8NoS6Ime1TckuSujiu6s5PVhZbDx1yCw-zkpcnaY2U0C1B96t5ou3LpKbjHaAYOn1qw9w7aQSYVA4MTNCCN2lAjlq9PbxvkW147Tkox2usDzBn93oK7vAQQ6llLnSkyHMvXLgmy_9iYww/4b7ir6S0qIXwkc8Al_F1jg/bwv534a.mid" onclick="return setToDownloaded('dlBtn_1_1_47_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Fugue
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_47_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/mVog0Q3ImS00yUnGOW1PEspXT5sYnrTDki5wwrUVNV5iYHmK1F1iYP74rA5CMETdH3Y_HlEcw-rC3skDYFiuHHhRGQDusHoXY3g_lXW6SBKy1Wze4eCp0ukj3zl-y2RoYNelwu54LaWdFPRdNTPasg/xx8PR1ox5pnmhBL1W9LiEA/bwv534b.mid" onclick="return setToDownloaded('dlBtn_1_1_47_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Trio Sonata No.2 in C, BWV526
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Trio Sonata No.2 in C, BWV526
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        174 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_48_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/GAH4mT-Uc6JXaqrz8rIqTZiMh273d0t13MBFhGbzjOJFWXmTvueVxps7SkeKAggm29AyspQuoYxXmHN5h357E1mmRuEc1A_nyxScrHzq1p5vqvGxqlHncDRtXs7SOzSDypO-eRQ0W2YvXHn9fi0m-Q/CAsbODa6MZSYq6C0XXqCkg/jsbwv526.mid" onclick="return setToDownloaded('dlBtn_1_1_48_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in G-, BWV535
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Prelude and Fugue in G-, BWV535
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        26 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_49_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/U8G9T1mepvxtA1GUG-pZnaNUYVge8MZDw-DBJpElU7_KQ5yKwJdHN9DUHSGWni33Rwwb_wzOUfLLcO4cDAZXus_bLnQ5zLUIcwbBIbr3GFFzf7Su0G9j0vh8xTbDVbdQAtAeLHBXzdB4SKm7zL-NQA/W7lyPYPyh1k49c1Ef2crFA/pfbwv535.mid" onclick="return setToDownloaded('dlBtn_1_1_49_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Organ Concerto in A-, BWV593 (arr. of Vivaldi's Concerto Op.3 No.6, RV522)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_50_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/UJjFShfCV2xNw2WeQVmO61LHGCAE2UACNdfTpgFTW0n1fRkp13QLW_AxDJLPHVv12qAiWfbKrRg8WSTrGSFcBen8px0s9ReKffthebNuMnLrvcX6vhb89kGP7tbXmUiBnIYJqa8EqeN0BG12EqTNsw/b_OezfHrmWCV5ss0dOCP_w/bjs-viv1.mid" onclick="return setToDownloaded('dlBtn_1_1_50_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Larghetto e spiritoso
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_50_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/KptA8N5Z6sMPutuvVAW9SqwdYCCsG148qou4pHrjiXVF1VkxPPYxCqgLY8S3WSxTFUB67kOAKss7XhVTv6or9uxuIFyk-vbOVLo17K3pEAyORXkLtAwDkD9zrEk5K4TLTmPlTcKtwL8XMFxYh6g5Xg/F4OpDCfbYQPPUclfjLmq3g/bjs-viv2.mid" onclick="return setToDownloaded('dlBtn_1_1_50_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: O Mensch, bewein' dein' Sünde gross, BWV622
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        O Mensch, bewein' dein' Sünde gross, BWV622
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_51_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/lQ7cKvILM2WVdRKMwqzqp_WMZi3aldJ_ILmzYM0DMLIi5E0fCRPROEFyjF6MJvocte7ZHrfNRZLk7Vv3goi7VYc3hXSffy_jjaQRsb40RPiaRcxDDT8Ll0uEzFDAeDC3D5BK8ylGIzFh8Z0CpkNRRg/-2S-OZLnI0T2PK41G3TMnA/bwv622.mid" onclick="return setToDownloaded('dlBtn_1_1_51_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Der Tag, der ist so freudenreich, BWV605
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Der Tag, der ist so freudenreich, BWV605
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_52_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/V1f4usFTdhvnwXRkCJF8I8zPMfvNiYlaqy08a4ob0jJ4pFfJJ5oWRWx8-F8PvWHB5f3pOzL_a8ISUtd31ov3LoHd-QceHmQK3d-uKd74EuV-0no1Uk-5XaW3voymVI249f-VGaV_ECqzez_N_VKxxA/j4hx4UzttxX4_BGXB8AEjA/dertag.mid" onclick="return setToDownloaded('dlBtn_1_1_52_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in C-, BWV549
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Prelude and Fugue in C-, BWV549
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_53_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/6uG6g_piys9F252tM3gOzM0pt7NCQ6ZaW5x0HazmM0IwW0CEgXaGknCNiUUFcJVipvNGoajUYq-yarWXmrEH-HnVh2ZYNcR5pzGVfZgHcrvydyxdew0qSwyzmeXiQCPq6yJkz1FQ_jsFb21HxZw-_g/IyJ2u2XVaHI3Yx_vFGUCUg/jsbwv549.mid" onclick="return setToDownloaded('dlBtn_1_1_53_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Vom Himmel hoch, da komm ich her, BWV606
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Vom Himmel hoch, da komm ich her, BWV606
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_54_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/zeTcC84_6pyvNYqC7kCONTPxCRmgjZbCJ_Lnm0eJn4E1x6Vi6ahtE_BdLrJmxfTztStT5HokcGGblQmVWEmDH2r8hHaOxEkjUQVE_zabw4Y-5E2inFr5yqMbNQP0hmW9JqWi8ajoG0VFfM_kBc3LhQ/1FGXVE_jiOZWK9Yjff5SGw/vom8.mid" onclick="return setToDownloaded('dlBtn_1_1_54_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Fugue in C-, BWV574
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Fugue in C-, BWV574
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        31 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_55_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/HQkk_e--oEaT4wC8eq4zyl_1plontrenzny2wrkcYHpCIoWGQiwH4wXAgS-ONSti-KMQbMx2Ee5WW3A0Tl_bWRK2HMF-wRWAfg8B7_XJdHvBUBj91sfKneHkSzT9PnJqQcrxeDUv7yRUA6Q1IZZ_8g/R1HDnupvnyHvvnDIZCrjeA/jsbfg574.mid" onclick="return setToDownloaded('dlBtn_1_1_55_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Fantasia and Fugue in A-, BWV561 (spurious)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Fantasia
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        21 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_56_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/DL7Yno8z7AFqChSjZhqP4dSKwzZovd_s_KKB22ktizDSlj5okjjwNsoaHktM-SzLvt_X8FHY7KHSvTUN8NOE3pB7EPUCfnxBlbsEhZnWVlfvP9ssIywHsxglpq6UgK54AVER_inVD8UobWF2sOCn1Q/i1QZeSel80v7XgNuZGNDDA/bjsfanam.mid" onclick="return setToDownloaded('dlBtn_1_1_56_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Trio Sonata No.3 in D-, BWV527
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Andante
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_57_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/4adfWUK5wZNm2DG1WopHNM7ulvYrNAW0Q7NFVxa6IG_aNgru5lCXxD362WIcCKpzVvlg5bzWEKwhXehVBMDUxmeSYm5geLZ38IO7NRIK7n_xFzL8Udo-UZWVw63BtWZ4zjv7uQromyPC7MhwtfxApw/GmiJ2ZBHQkMFDEfXFaGgDA/aljb527a.mid" onclick="return setToDownloaded('dlBtn_1_1_57_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Adagio e dolce
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_57_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Y_1KZaIyS2oLVotz7MAfmhcaf55M83nBuQ8xl5yBmrSN9PexdWFVL_KUdsk3L5zyTyDy1J-EnR7N80lDS1g2jwy2FUIaaxTjqFIWT7CenY5UdhVmyNqfc5uJf-7oBjSR_o9YeByBKntT-bVh7fWkeg/RT2RLt19a817EDdBGmSsgw/aljb527b.mid" onclick="return setToDownloaded('dlBtn_1_1_57_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Vivace
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_57_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/-ew-Zsn6IV7-3cFYIhx3ehbCek_qUnqVSO3NpFhwJ-Zhdwu3V5ap6Ydm-x-JyiGb5V2VFMGhnEvr3lqolsCLR5DSnkt_TLbmU120rbICJ8zcrvKW3Bntu4krZndWSnVh1M3oKi9gWrLKVDpUdj9gcQ/SVBMxVEZHgjjtVJBFH5-FQ/aljb527c.mid" onclick="return setToDownloaded('dlBtn_1_1_57_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Wenn wir in höchsten Nöten sein, BWV641
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Wenn wir in höchsten Nöten sein, BWV641
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_58_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/BfQ33KErSmLhOWCLDzJBPBbd8vvg4WNgPwO36_StiF3sFytnLQqraxkUHOca-ZZ9lPcrkchwKgjyhOnt0dXiABQJq8FgnIouUtd9lZaxuGelWJeCnaNbEG50fAlxKKL9B7fE2eeHeC2NKtyp9_dOJg/x_RTDGt8p3V9GVE1t4j-3g/bwv641.mid" onclick="return setToDownloaded('dlBtn_1_1_58_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Herr Christ, der einig Gottes Sohn, BWV601
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Herr Christ, der einig Gottes Sohn, BWV601
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_59_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/uScITi4GyQ2WYucN00Zi4wqjDC4Jcu1xq8GnlsGo-EI_ddn6NqdPQgmNEynjuDJv6-2bofet7P1CvgSebfO09A_tXupuNlBB6A4RpbvVhDBGZWE6VaLYOa_ECafnxo4WGarzzTcBrav6heig7kFwLg/5BtAhtmxT0JEdgYKGJ4lbg/bwv601.mid" onclick="return setToDownloaded('dlBtn_1_1_59_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Organ Concerto in G, BWV592 (arr. of Violin Concerto in G by Johann Ernst, Prince of Sachsen-Weimar)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro assai
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_60_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bc7nvqtIMaqChpxVydzfPnExeGLhPv6ate20q9Jf4DMKEWNemkkt2rivzhPipOFYpp54WTqUtxz7zw8L7XHNQBqeQGLrHY-P52lth2ky4anZ8wCc3NV552KVnvnX7no33V58bR_gUVa-gmrHPV8i1g/6PyKAk6mNIyIjAG0DGabMA/bwv592_1.mid" onclick="return setToDownloaded('dlBtn_1_1_60_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Grave
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_60_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/w6yoWRw0AS_cw4rd9LjPOF1oFFFQoTeIb9NfUSGCTi3U3KUR1CJcbjVDf_V-y408B4YjhjiHXzod_wHw-P9FPkYvoKPRlrzmBugzLbFW0nkRQP7XRAeNNtzOIvZvtt7IOQrfBZl0tG1OoS1rav2H9A/7VlzOQJeAaIjaPPG5dtMIw/bwv592_2.mid" onclick="return setToDownloaded('dlBtn_1_1_60_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Presto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_60_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/UuXqMGCczsRde39YSMMKL5jc4sF5DLUutRWF8VDiIHFtTK02CfEKI0xn08R8z67oYdOXYu59XMjYglBoHZ3dmS9CGhA0WO26amjMxvGgNK4v60T7es_Q82CORG8JrvtFg5QZGl9uV4klvhL3ZDfiqA/IExSfsyWqQlOqr8cpt7Zhw/bwv592_3.mid" onclick="return setToDownloaded('dlBtn_1_1_60_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Fugue in G, BWV576
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Fugue in G, BWV576
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        21 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_61_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/4DdETnC4lmR2XCXVd6EV47ITCekUhYN1S5rTZ7SWVAT5OYDTMR8zHX-Zbi0GZrhw7me6mBB6SwIYOu2k0w5uADsAPiz7OWTmiGPExfTrKzM-Uks207TFudZX4DSLCF0rKPuf39zvjW-hzRBjQMr5GQ/CbREZyOhLZ6zBp7j7G2zmA/jsbfg576.mid" onclick="return setToDownloaded('dlBtn_1_1_61_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Pedal excercise, BWV598 (perhaps by C.P.E. Bach)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Pedal excercise, BWV598 (perhaps by C.P.E. Bach)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_62_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/z9U7JlaXd2JYRXtDYueyE_lWRvXBFqzA2jFCpY3qGFXlnVOPdA_Keq6zKugA68PJqk1V1r3M1sNyCnMUQnyrdgJ-luSyV2M0zWB9r5swCvcpVFMxHC2h1VN03Vakl3oVT3c5sZZwu3IpG7fV5YLybA/3wu-SPO99uYFCklwGDfoiA/pebwv598.mid" onclick="return setToDownloaded('dlBtn_1_1_62_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Gott durch deine Güte, BWV600
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Gott durch deine Güte, BWV600
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_63_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/UZKgz5jRhWPc9VloHbDrRr5WPXwYjJNi1704UeGgeVbjevQA1W-AgCT1wICsE1rY-dtsaUebVd89mA1COQZCMM-xjDw0pxsCPQOcmM5xgvT-RAEq5naUchNqa-nmEBINn9eHLEsh8_2SZgoFirXtlA/jDzRYSD_138NlYnDlKB9-A/bwv600.mid" onclick="return setToDownloaded('dlBtn_1_1_63_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in B-, BWV544
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Prelude and Fugue in B-, BWV544
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        62 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_64_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/7PVw_fOqq8AOm_MxzvUw_tfB-QyZbD7lFaQqwlQjgAQcJzDCxt4WQc1jTs0oRL44_9Fy50qTyDIfEpUPYdCQs7gzpK8LMu099Wy2ZYeo_E6iyxEDrNcgpyAGfUxxNLKnOMrC6UC8d6jfD7ojvkgmGQ/sr73t__LN9Oy1jvnKyfxoQ/bwv544.mid" onclick="return setToDownloaded('dlBtn_1_1_64_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Lob sei dem allmächtigen Gott, BWV602
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Lob sei dem allmächtigen Gott, BWV602
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_65_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/FCInoniDs85GJRMkL_YQeLmyqHIdxssDOFwBOcSPW0xpK_EdagV5CYhKZnW42_9ETVzoOMnQKhqrYOBUCN8T9vanqzzJ36KQMiRmUvdWQ5GfNqi_bn48tdczTyquM1NgogoY7V2FoGpsjKVye_Lc3Q/3yT1s4xfN2-TsG_L7w4_Rg/bwv602.mid" onclick="return setToDownloaded('dlBtn_1_1_65_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Vom Himmel kam der Engel schar, BWV607
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Vom Himmel kam der Engel schar, BWV607
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_66_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/oDa3Cjb3wCMzVitBAqF1dSqEWPUJNBRm2RRlwSS3cjjuc8EBj6NYxyb4pus100URNM0dVQ_puUIrLLFodN3Ox1jQuFd7lLF5roMh6hBmCytlvXDFrABiaDbvG0PGE6-JC947AeV2C9G9eAt_DY4PUA/4YHcbh6NSsXczwsydYWSAQ/vomhim9.mid" onclick="return setToDownloaded('dlBtn_1_1_66_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: O Lamm Gottes unschuldig, BWV618
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        O Lamm Gottes unschuldig, BWV618
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_67_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ECHV0hmrFMbptkZp-SRotGJAPW6zXSqmgHgdmmUkUS5OknsvK1fQUzoUxHbf2d0L47Lc1PY3mm_higItZcMH88Xxylk94R9eB0LVXZpCsCbHqoYURUfi5gFJeyzAJ2NnFNaYZud9kYHnXLMEJwuLgw/MVCkvX7p1m1AOorhorB1TQ/bwv0618.mid" onclick="return setToDownloaded('dlBtn_1_1_67_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in A, BWV536
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Fugue
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_68_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/jIv9NHqs2KD_KICGa40E8E6DCY2fmnG3EVdP1VdmvhITsQNOWs0vqB5PP2x9eKxQM7kjfUCidAfhLGIczMC6T6YhJg6tNEAR5WVZGDaG4nBzZpWh2Uoza4gBIMdFqwi-d1S148Gy55GRL5_8XozMow/2cX1q9xx0QMboVzvDrvCJQ/bwv536.mid" onclick="return setToDownloaded('dlBtn_1_1_68_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Prelude and Fugue in C, BWV547
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Prelude and Fugue in C, BWV547
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        78 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_69_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/NPM3BmrDJoOLmizbiRu3bEHKwcK9YYpfURtyq0524VLZwvu6vFpSwMVy0NxKx91tGdCzqKLyRbFun_aYXevH1Sms0mvdH029VxUAITbtycHRJHZEfNwVSQZ5r12K22fQ7x4XaEsAPOByBu-cmebdEQ/btkiayO4NirRTgKOFdtWwQ/zbach547.mid" onclick="return setToDownloaded('dlBtn_1_1_69_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Toccata and Fugue in D-, BWV565 (famous organ work; authorship questionable)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Toccata and Fugue in D-, BWV565 (famous organ work; authorship questionable)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        25 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_70_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/odl-7QLM1hzcapWkLgT7_PIsbf7uo2MdHERl8EgbLvBYiIUzaa_ZZmMO9KJ6zZMz173j_F1sznrHwfobGwoR6r_V-Qh0w8ZMLQGk8YCgAH7zuJUuHaZR1HTV5vpUZWRtECZv3n2TAfUOvvOXAkZ0sw/mZMqC1iFiFvH-CogUkjY2w/565_tocf.mid" onclick="return setToDownloaded('dlBtn_1_1_70_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Jesus Christus, unser Heiland, BWV626
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Jesus Christus, unser Heiland, BWV626
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_71_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/kPiRY8AGgHWVpueP_vjsX7-24sujJ5-G3VYPl5luuHO6xTtgyVIdK8aeGYjGGOAsFTGhP9ToZVEcuPXeqdMvKwAkYlDJQXUYFIHSgjvVHLP_66LBA86xhEeXKKLR_V2uMv-bzYdRYX161sHStxtNZQ/DjrCfRi7lTpe9gamAJlJEg/bwv0626.mid" onclick="return setToDownloaded('dlBtn_1_1_71_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Fugue in G, BWV577 (spurious)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Fugue in G, BWV577 (spurious)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_72_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/1bfa3qGSJHPloLQosljcCskcBiF64gcDNM1vEZlUlqRsj7LcVrcdzFz4-v0zG-otK6VyhFxUG-zhx-OrY4lh2sNHIiS24iMbHIVzsAwPTWhY-urck_da7N-f9oAYiu07VMBT-pCri7wHHSs8Ik4QBw/lxVSRLE0cWOMeBvXnbJlhw/fuge_in_.mid" onclick="return setToDownloaded('dlBtn_1_1_72_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Fantasia and Fugue in C-, BWV537
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Fantasia and Fugue in C-, BWV537
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        21 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_73_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/jAHrjimVjSBHJmtJ_T6uwx3GpzNHXcWGTs1OWPJDjj3FGETB_hy9FKbDSl3vi5isF19EHE5HWJNeBvu82H3KCy9kionghxjPnMX7NYFZRnR2DvoMaqEG6KzbXkvNpcU-LFEEixzI_HQprfodESWtDQ/yMHDl_e_yKQUoQcyETOwyQ/bach537.mid" onclick="return setToDownloaded('dlBtn_1_1_73_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johann Sebastian Bach: Fantasia in G, BWV572
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Fantasia in G, BWV572
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        32 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_74_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/adw6nu0qBFn0vJeQm27PU1RKV3FBAvk5H2VahMBMQCN195HieEpABX5-nVHlOBfDKxDgnWgv5uRZ_kcP8BuRyrPkd0gcMo6S4ftVFJQ9heHDzU2mBpfNiE7NySezYx7qICwH12BIcG9Msgesz4DjhQ/gx0Zqls4MpczP8sgzCELaA/bwv572.mid" onclick="return setToDownloaded('dlBtn_1_1_74_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                        <div class="tl"></div>
+                                        <div class="tr"></div>
+                                        <div class="bl"></div>
+                                        <div class="br"></div>
+                                    </div>
+
+                                </div>
+
+                                        <div class="ft">
+                                            <div style="float:right;">
+                                                <ul>
+                                                    <li><span id="clearBtnBot" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" hidefocus="true" onclick="return clearTracks()">Clear Already Downloaded Tracks</button></span></span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clearSm"></div>
+                                        </div>
+
+                                <div class="tl"></div>
+                                <div class="tr"></div>
+                                <div class="bl"></div>
+                                <div class="br"></div>
+                            </div>
+                        </form>
+                    <!-- /CONTENT -->
+                    </div>
+                </td>
+
+            </tr>
+        </table>
+
+
+
+                </div>
+                <div class="content pBottom">
+                    <noscript>
+                        <div id="JSEMSG">
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                            <div class="Bdy">
+                                <h2>Please enable Javascript in your browser's settings, and reload this page.</h2>
+                                Please click <a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/auto" target="_blank">this link</a> for instructions on how to enable Javascript.<br/><br/>
+                                If you continue to see this message, your security software is interfering with your browser.
+                                Please contact your security software's customer service or (if your computer has a service warranty) your computer's manufacturer, and ask how to configure it to allow Javascript.<br/>
+                            </div>
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                        </div>
+                    </noscript>
+                    &nbsp;
+                </div>
+                <div class="content">
+
+
+                    <div class="yui-g cpline">
+                        <div class="cpinfo">&copy; 1994-2019 Classical Archives LLC &mdash;  The Ultimate Classical Music Destination &trade;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ft">
+            <div id="cma-bot" class="sides">
+                <div class="footer">
+
+
+<div class="yui-gb first">
+    <div class="yui-u first">
+        <ul>
+
+            <li class="first"><a href="javascript:openapmradio()">Free Internet Radio</a></li>
+            <li>&nbsp;</li>
+
+            <li class="first"><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/help-bubble.html',null,'Help'); return false;">Help</a></li>
+            <li><a href="/secure/password.html">Forgot password</a></li>
+            <li><a href="/choose_player.html">Browser Compatibility Test</a></li>
+            <li><a href="/help.html">How to play / download / burn music</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/musicology-bubble.html',null,'Musicology Correction'); return false;">Submit musicology correction</a></li>
+            <li><a href="/help.html">Tutorials &amp; FAQs</a></li>
+            <li><a href="/howto/tutorials.html">How To</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/subscription-bubble.html',null,'Subscription Help'); return false;">My Subscription</a></li>
+            <li><a href="/secure/message.html">Send Feedback</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/sitemap.html">Sitemap</a></li>
+            <li>&nbsp;</li>
+            <li class="first"><a href="/submit/">Submit Your Music</a></li>
+            <li class="first">Tutorials</li>
+            <li><a href="javascript:tutOverview();">Overview</a></li>
+            <li><a href="javascript:tutComposers();">Composers</a></li>
+            <li><a href="javascript:tutWorks();">Works</a></li>
+            <li><a href="javascript:tutArtists();">Artists</a></li>
+            <li><a href="javascript:tutAlbums();">Albums</a></li>
+            <li><a href="javascript:tutPlaylists();">Playlists</a></li>
+
+            <li>&nbsp;</li>
+            <li class="first"><a href="/google_button.html">Google Toolbar Button (IE &amp; FF only)</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/intro.html">Introduction to Classical Archives</a></li>
+            <li>&nbsp;</li>
+
+            <li class="first"><a href="https://blog.classicalarchives.com/">Blog</a></li>
+            <li class="first"><a href="/about.html">About Us</a></li>
+            <li class="first"><a href="/secure/message.html">Contact Us</a></li>
+            <li class="first"><a href="/link.html">Link to Us</a></li>
+            <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html#ip">Copyrights &amp; Permissions</a></li>
+            <li>&nbsp;</li>
+            <li id="tFlag" class="first">
+
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="swfversion"></div>
+<script type="text/javascript">embedVersionPlugin();</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="google-analytics-tracking">
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-346506-3']);
+        _gaq.push(['_setDomainName', '.classicalarchives.com']);
+        _gaq.push(['_trackPageview']);
+    </script>
+</div>
+<div id="MsgBox2" class="yui-hidden">
+    <div class="hd">&nbsp;</div>
+    <div class="bd">
+        <iframe id="surveyFrame" width="470" height="450" scrolling="auto" frameborder="0" title="Survey" style="margin:10px;"></iframe>
+    </div>
+    <div class="ft"></div>
+</div>
+
+
+    </body>
+</html>

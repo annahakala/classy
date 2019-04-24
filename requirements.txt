@@ -1,3 +1,7 @@
 music21
 torch
 torchvision
+numpy
+pyknon
+beautifulsoup4
+requests

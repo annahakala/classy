@@ -5,7 +5,8 @@ https://github.com/mcleavey/musical-neural-net/blob/master/data/midi-to-encoding
 '''
 
 def translate_piece(path):
-
+    sample_freq = 12
+    note_range = 62
     #Create music 21 midifile object
     mf = music21.midi.MidiFile()
 
@@ -24,3 +25,11 @@ def translate_piece(path):
     except:
         print("Skipping file: translation of " + (str(path))+ " failed")
         return
+
+def main(path):
+    translate_piece(path)
+    return
+
+if __name__ == "__main__":
+    path = '../data/midi/Bach/Bwv1080\ The\ Art\ Of\ Fugue/Canon\ Fugue\ n1.mid'
+    main(path)
