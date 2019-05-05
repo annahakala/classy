@@ -1,4 +1,6 @@
 import music21
+from pathlib import Path
+import argparse
 
 
 def writeMidi(stream, filename, output_folder):
@@ -53,22 +55,46 @@ def notewiseToStream(score, sample_freq, note_offset):
     return piano_stream
 
 
-def encodeToMidi(score, sample_freq, note_offset, fname):
-    m21_stream = notewiseToStream(score, sample_freq, note_offset)
+def encodeToMidi(encoded_score, sample_freq, note_offset, fname, output_folder):
+    m21_stream = notewiseToStream(encoded_score, sample_freq, note_offset)
     #m21_stream.show("midi")
-    filename = "testfile.mid"
-    output_folder="tests"
-    writeMidi(m21_stream, filename, output_folder)
+    writeMidi(m21_stream, fname, output_folder)
+    print("File: "+ str(fname)+" written")
     return 
 
 if __name__ == "__main__":
-    f = open('../data/composers/notewise/piano_solo/note_range62/sample_freq12/bach/bwv805.txt','r')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--path', dest='path', help="Path to encoded txt-file")
+
+    parser.add_argument('--out', dest='out', help="Output folder of midi")
+    parser.set_defaults(out="./")
+
+    parser.add_argument('--fname', dest='fname', help="Filename of midi")
+    parser.set_defaults(fname="decoded_midi_file.mid")
+
+    parser.add_argument('--sample_freq', dest='sample_freq', help="Sample frequency of encoding")
+    parser.set_defaults(sample_freq=12)
+
+    parser.add_argument('--offset', dest='offset', help="Note offset of encoding")
+    parser.set_defaults(offset=33)
+
+    args = parser.parse_args()
+
+    
+    if args.path == None: #Check if user has entered a path
+        print("Error: Please enter a path for the file with the --path flag")
+        quit()
+
+    path = args.path
+
+    f = open(args.path,'r')
     score = f.read().split(" ")
     f.close()
-    sample_freq = 12
-    note_offset = 33
-    fname = "test"
+    sample_freq = args.sample_freq
+    note_offset = args.offset
+    fname = args.fname
+    output_folder = args.out
 
-    encodeToMidi(score, sample_freq, note_offset, fname)
+    encodeToMidi(score, sample_freq, note_offset, fname, output_folder)
 
     
