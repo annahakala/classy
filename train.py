@@ -16,7 +16,7 @@ def load_files(load_dir):
         files[i] = os.path.join(load_dir,files[i])
     return files
 
-def create_dataset(files, val_data_amount=0.3, sequence_max_length=30, step=3):
+def create_dataset(files, train_data_amount=0.7, sequence_max_length=30, step=3):
     """ Creates a dataset and splits it into training and validation data.
     Returns the training and validation datasets as well as the enumerations.
     @TODO maybe save the datasets to a folder instead of returning them
@@ -51,18 +51,18 @@ def create_dataset(files, val_data_amount=0.3, sequence_max_length=30, step=3):
 
     print("Generated ", len(sequences), "sequences")
 
-    val_samples = int(val_data_amount*len(sequences))
+    t_samples = int(train_data_amount*len(sequences))
 
     #Split the dataset into training and validation data
 
     sequences = np.array(sequences)
     np.random.shuffle(sequences)
 
-    t_seqs_input = sequences[:val_samples]
-    t_seqs_target = next_notes[:val_samples]
+    t_seqs_input = sequences[:t_samples]
+    t_seqs_target = next_notes[:t_samples]
 
-    v_seqs_input = sequences[val_samples:]
-    v_seqs_target = next_notes[val_samples:]
+    v_seqs_input = sequences[t_samples:]
+    v_seqs_target = next_notes[t_samples:]
     
     print("Split the dataset into ",len(t_seqs_input), " training samples and ", len(v_seqs_input), " validation samples.")
 
@@ -175,6 +175,35 @@ class Decoder(nn.Module):
     def init_hidden(self):
         return torch.zeros(1, 1, self.hidden_size, device=device)
 
+def evaluate(encoder, decoder, input_seq):
+    """Translate given sentence input_seq using trained encoder and decoder.
+    
+    Args:
+      encoder (Encoder): Trained encoder.
+      decoder (Decoder): Trained decoder.
+      input_seq (tensor): Tensor of words (word indices) of the input sentence (shape [input_seq_length, 1]).
+    
+    Returns:
+      output_seq (tensor): Tensor of words (word indices) of the output sentence (shape [output_seq_length, 1]).
+    """
+    # YOUR CODE HERE
+     
+    hidden = encoder.init_hidden()
+    
+    encoder_outputs, hidden = encoder.forward(input_seq, hidden)
+    decoder_outputs, hidden = decoder.forward(hidden)
+    
+    outputs = []
+    #print(input_seq.size())
+    for i in range(decoder_outputs.size()[0]):
+      
+      value, index = decoder_outputs[i,0,:].max(0)
+      outputs.append(index)
+    
+    decoder_outputs = torch.tensor(outputs, device=device).view(decoder_outputs.size()[0], 1)
+    
+    return decoder_outputs
+
 if __name__ == '__main__':
     """This is the stuff that should be done through the notebook, rest can be called I guess
     """
@@ -186,14 +215,14 @@ if __name__ == '__main__':
     train_path = os.path.join(data_dir,'train/')
     test_path = os.path.join(data_dir,'test/')
 
-    val_data_amount = 0.3 #Rest will be training data
+    train_data_amount = 0.01 #Rest will be validation data
 
     print('The complete directory from where the files are loaded is ', complete_dir)
 
     files = load_files(complete_dir)
     print('Loaded %d files' % len(files))
 
-    t_seqs_input, t_seqs_target, v_seqs_input, v_seqs_target, notes_indices, indices_notes = create_dataset(files, val_data_amount)
+    t_seqs_input, t_seqs_target, v_seqs_input, v_seqs_target, notes_indices, indices_notes = create_dataset(files, train_data_amount)
 
     skip_training = False
     device = torch.device("cpu")
@@ -212,11 +241,11 @@ if __name__ == '__main__':
     decoder_optimizer = optim.SGD(decoder.parameters(), lr=0.01)
     criterion = nn.NLLLoss(reduction='sum')
 
-    n_epochs = 8
+    n_epochs = 10
     t_seqs_input = torch.tensor(t_seqs_input)
     t_seqs_target = torch.tensor(t_seqs_target)
 
-    print("The shape is ",t_seqs_input.shape)
+    #print("The shape is ",t_seqs_input.shape)
     #trainloader = torch.utils.data.DataLoader(t_seqs, batch_size=1, shuffle=True)
 
     for epoch in range(n_epochs):
@@ -292,3 +321,39 @@ if __name__ == '__main__':
             break
 
         print('Finished Training')
+
+
+        # Save the model to disk, submit these files together with your notebook
+    encoder_filename = '5_encoder.pth'
+    decoder_filename = '5_decoder.pth'
+    if not skip_training:
+        try:
+            do_save = input('Do you want to save the model (type yes to confirm)? ').lower()
+            if do_save == 'yes':
+                torch.save(encoder.state_dict(), encoder_filename)
+                torch.save(decoder.state_dict(), decoder_filename)
+                print('Model saved to %s, %s.' % (encoder_filename, decoder_filename))
+            else:
+                print('Model not saved.')
+        except:
+            raise Exception('The notebook should be run or validated with skip_training=True.')
+    else:
+        hidden_size = 256
+        encoder = Encoder(len(notes_indices), hidden_size).to(device)
+        encoder.load_state_dict(torch.load(encoder_filename, map_location=lambda storage, loc: storage))
+        print('Encoder loaded from %s.' % encoder_filename)
+        encoder = encoder.to(device)
+        encoder.eval()
+
+        decoder = Decoder(hidden_size, len(notes_indices)).to(device)
+        decoder.load_state_dict(torch.load(decoder_filename, map_location=lambda storage, loc: storage))
+        print('Decoder loaded from %s.' % decoder_filename)
+        decoder = decoder.to(device)
+        decoder.eval()
+
+    #print(t_seqs_input.shape)
+    #input_seq = t_seqs_input[23,:].view(-1,1)
+    #output_seq = evaluate(encoder, decoder, input_seq)
+
+    #print('>', ' '.join(indices_notes[i] for i in input_seq))
+ 
