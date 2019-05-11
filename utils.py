@@ -12,7 +12,7 @@ def load_files(load_dir):
         files[i] = os.path.join(load_dir,files[i])
     return files
 
-def create_dataset(files, SOS_token, EOS_token, train_data_amount=0.7, sequence_max_length=30, step=3):
+def create_dataset(files, SOS_token="SOS", EOS_token="EOS", train_data_amount=0.7, sequence_max_length=30, step=3):
     """ Creates a dataset and splits it into training and validation data.
     Returns the training and validation datasets as well as the enumerations.
     @TODO maybe save the datasets to a folder instead of returning them
