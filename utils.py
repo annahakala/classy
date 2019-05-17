@@ -74,11 +74,9 @@ def create_dataset(files, ni_dict, in_dict, train_data_amount=0.7, sequence_max_
 
         dataset += f
 
-    pickle_in_1 = open(ni_dict,"rb")
-    pickle_in_2 = open(in_dict,"rb")
 
-    notes_indices = pickle.load(pickle_in_1)
-    indices_notes = pickle.load(pickle_in_2)
+    notes_indices = ni_dict
+    indices_notes = in_dict
 
     for i in range(len(dataset)):
         dataset[i] = notes_indices[dataset[i]]
