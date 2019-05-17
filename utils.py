@@ -110,4 +110,4 @@ def create_dataset(files, ni_dict, in_dict, train_data_amount=0.7, sequence_max_
     
     print("Split the dataset into ",len(t_seqs_input), " training samples and ", len(v_seqs_input), " validation samples.")
 
-    return t_seqs_input, t_seqs_target, v_seqs_input, v_seqs_target, notes_indices, indices_notes
+    return t_seqs_input, t_seqs_target, v_seqs_input, v_seqs_target
